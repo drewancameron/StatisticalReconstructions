@@ -1,0 +1,8 @@
+generic_reconstructor.R is the main file for running the algorithm
+
+not provided here are:
+- MB_PerthGCC*, SA1_PerthGCC* and SA2_PerthGCC* which are versions of the ASGS Shapefiles clipped to GCC_NAME1=="Greater Perth" 
+  from https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files
+- MB_by_HCFMD.csv, SA1_by_HCFMD.csv and SA2_by_HCFMD.csv which are TableBuilder outputs of tables of HCFMD classes and row totals for the 2021 Census by place of residence
+  from https://www.abs.gov.au/statistics/microdata-tablebuilder/tablebuilder
+
