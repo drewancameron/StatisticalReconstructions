@@ -80,8 +80,8 @@ update_prior <- function() {
                      'field'=rep(0,perth.mesh$n),
                      'iid_errors'=rep(0,geographical_hierarchy[[1]]$N))
   objx <- MakeADFun(input.data,parameters,DLL='perth_household_count_model',random=c('irsad_offsets','type_offsets','field','iid_errors'))
-  optx <- nlminb(obj$par, obj$fn, obj$gr)
-  repx <- sdreport(obj, getJointPrecision = TRUE)
+  optx <- nlminb(objx$par, objx$fn, objx$gr)
+  repx <- sdreport(objx, getJointPrecision = TRUE)
   library(sparseMVN)
   xsample <- rmvn.sparse(10, c(repx$par.fixed, repx$par.random), Cholesky(repx$jointPrecision), prec = TRUE)
   colnames(xsample) <- names(c(repx$par.fixed,repx$par.random))
