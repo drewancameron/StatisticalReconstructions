@@ -48,7 +48,7 @@ update_prior <- function() {
                      'N_MB_type'=max(MB_type),
                      'MB_types'=MB_type,
                      'N_pos'=current_cell_count[[1]]$classes[,2],
-                     'N_neg'=current_cell_count[[1]]$classes[,1])
+                     'N_neg'=current_cell_count[[1]]$totals-current_cell_count[[1]]$classes[,2])
   if (sum(as.integer((input.data$N_neg+input.data$N_pos)==0)) > 0) {
     input.data$N_neg[(input.data$N_neg+input.data$N_pos)==0] <- 1}
   parameters <- list('log_sd_field'=0,
