@@ -44,7 +44,7 @@ source("run_Gibbs_sampler.R")
 source("summarise_results.R")
 
 results_list <- summarise_results(61,610)
-coverage <- summarise_results_mock_data(results_list,fiducial)
+coverage <- summarise_results_mock_data(results_list,mockdataset$fiducial)
 map_results(results_list)
 add_coverage_MB(coverage[[1]])
 
@@ -70,7 +70,7 @@ source("run_Gibbs_sampler.R")
 source("summarise_results.R")
 
 results_list <- summarise_results(61,610)
-coverage <- summarise_results_mock_data(results_list,fiducial)
+coverage <- summarise_results_mock_data(results_list,mockdataset$fiducial)
 map_results(results_list)
 add_coverage_MB(coverage[[1]])
 
